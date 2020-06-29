@@ -1,0 +1,113 @@
+
+.navbar-container .navbar-list > div {
+    border: none;
+    height: 50px;
+}
+.navbar-container .navbar-list > div .hamburger-checkbox {
+    
+    position: relative;
+    left:0;
+    top:0;
+    cursor: pointer;
+    height: 50px;
+    width:50px;
+    border:none;
+    opacity: 0;    
+    z-index: 6;
+}
+
+/*  Hamburger lines  */
+
+.navbar-container .navbar-list > div .hamburger-line {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    left:0;
+    top:0;
+    width:50px;
+    height: 50px;
+}
+
+.navbar-container .navbar-list > div .hamburger-line > div {
+    position: relative;
+    height: 3px;
+    width:60%;
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content:center;
+}
+
+.navbar-container .navbar-list > div .hamburger-line > div:before,
+.navbar-container .navbar-list > div .hamburger-line > div:after {
+    content: '';
+    position: absolute;
+    z-index: 1;
+    top:-10px;
+    width: 100%;
+    height: 3px;
+    background: inherit;
+}
+
+.navbar-container .navbar-list > div .hamburger-line > div:after {
+    top:10px;
+}
+
+/*  hidden menu styling  */
+
+
+.navbar-container .hidden-menu .hidden-nav-walmart-com > ul {
+    margin-bottom: 50px;
+}
+
+.navbar-container .hidden-menu .hidden-nav-walmart-com > ul hr {
+    margin: 20px 20px;
+    opacity: 0.4;
+}
+
+
+.navbar-container .hidden-menu .hidden-nav-walmart-com > ul > li > a{
+    color: #000;
+    padding:9px 2rem;
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+}
+
+.navbar-container .hidden-menu .hidden-nav-walmart-com > ul > li > a img {
+    height: 22px;
+    width: 22px;
+    margin-right: 10px;
+}
+
+.navbar-container .hidden-menu .hidden-nav-walmart-com .hidden-menu-head {
+    padding:0.5rem;
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 600;
+}
+
+
+.navbar-container .hidden-menu .hidden-nav-walmart-com > ul > li > a:hover {
+    text-decoration: underline;
+}
+
+.navbar-container .hidden-menu {
+    position: absolute;
+    top:50px;
+    width:320px;
+    height: calc(100vh - 50px);
+    left:-320px;  
+    z-index: 2;
+    overflow-y: auto;
+    overflow-x: hidden;
+    background:#fff;
+    color:#000;
+    transition: left ease 0.3s;
+}
+
+.navbar-container .show-menu {
+    left: 0;
+    transition: all ease 0.4s;
+}
