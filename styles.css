@@ -1,0 +1,229 @@
+*{
+    margin: 0;
+    padding:0;
+    font-family: sans-serif;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+body {
+    
+}
+
+:root{
+    --primary-color:#041e42;
+}
+
+.navbar-container{
+    position: fixed;
+    top:0;
+    left:0;
+    width: 100vw;
+}
+
+.navbar-container .navbar-list{
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+    width: inherit;
+    background:var(--primary-color);
+    color:#fff;
+}
+
+.navbar-container .navbar-list li{
+    display: block;
+    padding: 1rem 2vw;
+}
+
+.navbar-container .navbar-list li a{
+    color: inherit;
+}
+
+.navbar-container .navbar-list li:hover{
+    background:#fff;
+    color:var(--primary-color);
+    transition: all 0.3s ease;
+}
+
+
+.navbar-container .navbar-list > div {
+    border: none;
+    height: 50px;
+}
+.navbar-container .navbar-list > div .hamburger-checkbox {
+    
+    position: relative;
+    left:0;
+    top:0;
+    cursor: pointer;
+    height: 50px;
+    width:50px;
+    border:none;
+    opacity: 0;    
+    z-index: 6;
+}
+
+/*  Hamburger lines  */
+
+.navbar-container .navbar-list > div .hamburger-line {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    left:0;
+    top:0;
+    width:50px;
+    height: 50px;
+}
+
+.navbar-container .navbar-list > div .hamburger-line > div {
+    position: relative;
+    height: 3px;
+    width:60%;
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content:center;
+}
+
+.navbar-container .navbar-list > div .hamburger-line > div:before,
+.navbar-container .navbar-list > div .hamburger-line > div:after {
+    content: '';
+    position: absolute;
+    z-index: 1;
+    top:-10px;
+    width: 100%;
+    height: 3px;
+    background: inherit;
+}
+
+.navbar-container .navbar-list > div .hamburger-line > div:after {
+    top:10px;
+}
+
+/*  hidden menu styling  */
+
+
+.navbar-container .hidden-menu .hidden-nav-walmart-com > ul {
+    margin-bottom: 50px;
+}
+
+.navbar-container .hidden-menu .hidden-nav-walmart-com > ul hr {
+    margin: 20px 20px;
+    opacity: 0.4;
+}
+
+
+.navbar-container .hidden-menu .hidden-nav-walmart-com > ul > li > a{
+    color: #000;
+    padding:9px 2rem;
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+}
+
+.navbar-container .hidden-menu .hidden-nav-walmart-com > ul > li > a img {
+    height: 22px;
+    width: 22px;
+    margin-right: 10px;
+}
+
+.navbar-container .hidden-menu .hidden-nav-walmart-com .hidden-menu-head {
+    padding:0.5rem;
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 600;
+}
+
+
+.navbar-container .hidden-menu .hidden-nav-walmart-com > ul > li > a:hover {
+    text-decoration: underline;
+}
+
+.navbar-container .hidden-menu {
+    position: absolute;
+    top:50px;
+    width:320px;
+    height: calc(100vh - 50px);
+    left:-320px;  
+    z-index: 2;
+    overflow-y: auto;
+    overflow-x: hidden;
+    background:#fff;
+    color:#000;
+    transition: left ease 0.3s;
+}
+
+.navbar-container .show-menu {
+    left: 0;
+    transition: all ease 0.4s;
+}
+
+/* Banner style */
+
+.top-banner {
+    margin-top: 50px;
+    width: 100vw;
+    height: 60px;
+    background-color: #000;
+    color:#fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.top-banner .text-center,
+.top-banner .banner-link > a{
+    color:#fff;
+}
+.top-banner .banner-link > a {
+    text-decoration: underline;
+}
+
+/* Image slider style  */ 
+
+.image-slider a,
+.image-slider a img{
+    width: 100vw;
+}
+
+/* Featured catagories */
+
+
+.featured-catagories {
+    /* border: dotted green 3px;  */
+    background-color:#fff;              /* change later */
+}
+
+.featured-catagories > h2 {
+    margin: 4vh 0;
+    text-align: center;
+}
+
+.featured-catagories .featured-grid {
+    width: 100vw;
+    height: auto;
+    padding:0 0 30px 0;              /*maybe change ?*/
+    /* outline: dotted 3px black; */
+    display: flex;
+    flex-direction: row;
+}
+
+.featured-catagories .featured-grid .featured-item {
+    width: 25vw;
+    height: auto;
+}
+.featured-catagories .featured-grid .featured-item .item-link {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color:#000;
+}
+
+.featured-catagories .featured-grid .featured-item .item-link img {
+    width:100%;
+}
+.featured-catagories .featured-grid .featured-item .item-link .reduce-image{
+    width:75%;
+    margin-bottom: 30px;
+}
