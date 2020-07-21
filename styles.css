@@ -1,0 +1,146 @@
+*{
+    margin: 0;
+    padding:0;
+    font-family: sans-serif;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+body{
+    /* height: 200vh; */
+}
+
+:root{
+    --primary-color:#041e42;
+}
+
+.flex-centering-row {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.navbar-container{
+    position: fixed;
+    top:0;
+    left:0;
+    width: 100vw;
+    z-index: 2;
+}
+
+.navbar-container .navbar-list{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: inherit;
+    background:var(--primary-color);
+    color:#fff;
+    height: 50px;
+}
+
+/* left navbar styling */
+
+.navbar-container .navbar-list .left-navbar-container{
+    padding: 1rem 10px;
+}
+
+
+.navbar-container .navbar-list .left-navbar-container > a > img {
+    height: 25px;
+}
+
+
+/* center navbar styling */
+
+
+.navbar-container .navbar-list .center-navbar-container .searchbar {
+    width: 30vw;
+    height: 28px;
+    border-style: none;
+}
+
+.navbar-container .navbar-list .center-navbar-container button{
+    cursor: pointer;
+}
+
+.navbar-container .navbar-list .center-navbar-container .searchbar:focus,
+.navbar-container .navbar-list .center-navbar-container button {
+    border: none;
+    outline: none;
+}
+
+.navbar-container .navbar-list .center-navbar-container .left-search {
+    height: 28px;
+    width:50px;
+    border-style: none;
+    background-color: #fff;
+    border-bottom-left-radius: 100px;
+    border-top-left-radius: 100px;
+}
+
+.navbar-container .navbar-list .center-navbar-container > button >img{
+    height: 20px;
+    width:auto;
+}
+.navbar-container .navbar-list .center-navbar-container .right-search {
+    height: 28px;
+    width:50px;
+    border-style: none;
+    background-color: #ffc220;
+    border-bottom-right-radius: 100px;
+    border-top-right-radius: 100px;
+}
+
+/* right navbar styling */
+
+.navbar-container .navbar-list .right-navbar-container {
+    margin-right: 20px;
+}
+
+.navbar-container .navbar-list .right-navbar-container a {
+    color:inherit;
+    padding:0.5rem;
+}
+
+.navbar-container .navbar-list .right-navbar-container a > img {
+    margin:0.5rem;
+    height: 24px;
+}
+
+
+/* Banner style */
+
+.top-banner {
+    margin-top: 50px;
+    width: 100vw;
+    height: 60px;
+    background-color:#fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.top-banner .text-center,
+.top-banner .banner-link > a{
+    text-align: center;
+    max-width: 80vw;
+    color:#0071DC;
+}
+.top-banner .banner-link > a {
+    text-decoration: underline;
+}
+
+/* Image slider style  */ 
+
+
+
+.image-slider a,
+.image-slider a img{
+    width: 1354px;
+    max-width: 100vw;
+}
+
+/* Featured catagories */
